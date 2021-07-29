@@ -10,7 +10,7 @@
 #
 # Note by default jobs' location is set to **Canada**. It can be changed to any other location simply by pasting Linkedin URL that contains desired Job Postings in the desired location.
 #
-# We are also setting up `Chrome Driver` locally, specifying its' path. And finally opening the link in a Chrome browser with `selenium`.
+# We are also setting up `Chrome Driver` locally, specifying its path. And finally opening the link in a Chrome browser with `selenium`.
 
 # %%
 # Importing libraries and specifying URL and Chrome driver path
@@ -79,12 +79,14 @@ lnks = driver.find_elements_by_class_name('base-card__full-link')
 links_list = []
 for lnk in lnks[:position_num]:
     link_str = (lnk.get_attribute('href'))
-    links_list += [link_str]
-driver.quit()
+    # links_list += [link_str]
+    links_list.append(link_str)
+# driver.quit()
 
 # previewing list's contents
 for y in range(3):
     print(links_list[y])
+    print()
 
 # %% [markdown]
 
