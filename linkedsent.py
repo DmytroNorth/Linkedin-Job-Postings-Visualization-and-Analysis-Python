@@ -40,8 +40,6 @@ driver.get(url)
 # %% [markdown]
 # Now the link is opened in **Chrome browser**. However, most job postings are **hidden** and cannot be scraped. We will have to scroll the webpage down before we can scrape.
 
-#  ![linkedin-data-analyst-canada](img/linkedin-dataanalyst.png)
-
 # ## Loading webpage by scrolling down with `JavaScript`
 
 # Since `Python` does not have a built-in function to scroll pages we are using `JavaScript` to scroll the webpage down and also to check **body height** to determine when to stop the loop.
@@ -68,8 +66,6 @@ while True:
 # %% [markdown]
 # After 100 job postings there is a "See more jobs" button. Since 100 jobs should be enough for hour purposes we don't proceed with pressing the button.
 
-# ![linkedin-data-analyst-canada](img/linkedin-dataanalyst-scrolldown.png)
-
 # ## Scraping job postings' links
 
 # Once we have all 100 job postings loaded we can **scrape the links** with `selenium`.
@@ -84,7 +80,7 @@ links_list = []
 for lnk in lnks[:position_num]:
     link_str = (lnk.get_attribute('href'))
     links_list += [link_str]
-# driver.quit()
+driver.quit()
 
 # previewing list's contents
 for y in range(3):
