@@ -9,8 +9,8 @@ import advertools as adv
 import matplotlib.pyplot as plt
 
 # specifying URL and nuber of job postings
-postings_name = 'Teacher'
-position_num = 3  # numbers 1 to 100
+postings_name = 'Data Analyst'
+position_num = 100  # numbers 1 to 100
 
 # building linkedin link
 posit = '%20'.join(postings_name.split())
