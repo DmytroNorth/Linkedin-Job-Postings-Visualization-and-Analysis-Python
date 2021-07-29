@@ -10,7 +10,7 @@
 #
 # Note by default jobs' location is set to **Canada**. It can be changed to any other location simply by pasting Linkedin URL that contains desired Job Postings in the desired location.
 #
-# We are also setting up `Chrome Driver` locally, specifying its' path. And finally opening the link in a Chrome browser with `selenium`
+# We are also setting up `Chrome Driver` locally, specifying its' path. And finally opening the link in a Chrome browser with `selenium`.
 
 # %%
 # Importing libraries and specifying URL and Chrome driver path
@@ -32,7 +32,7 @@ url = f'https://www.linkedin.com/jobs/search?keywords={posit}&location=Canada&ge
 
 # setting chrome driver path
 path = '/Users/dmytrokryvonog/Documents/DAT/gda/gdasent/chromedriver'
-# %%
+
 # opening url in Chrome browser
 driver = webdriver.Chrome(path)
 driver.get(url)
@@ -40,7 +40,7 @@ driver.get(url)
 # %% [markdown]
 # Now the link is opened in **Chrome browser**. However, most job postings are **hidden** and cannot be scraped. We will have to scroll the webpage down before we can scrape.
 
-#  ![linkedin-data-analyst-canada](img/linkedin-dataanalyst.png)
+#  ![linkedin-data-analyst-canada](/img/linkedin-dataanalyst.png)
 
 # ## Loading webpage by scrolling down with `JavaScript`
 
@@ -68,7 +68,7 @@ while True:
 # %% [markdown]
 # After 100 job postings there is a "See more jobs" button. Since 100 jobs should be enough for hour purposes we don't proceed with pressing the button.
 
-# ![linkedin-data-analyst-canada](img/linkedin-dataanalyst-scrolldown.png)
+# ![linkedin-data-analyst-canada](/img/linkedin-dataanalyst-scrolldown.png)
 
 # ## Scraping job postings' links
 
