@@ -40,7 +40,7 @@ driver.get(url)
 # %% [markdown]
 # Now the link is opened in **Chrome browser**. However, most job postings are **hidden** and cannot be scraped. We will have to scroll the webpage down before we can scrape.
 
-#  ![linkedin-data-analyst-canada](/img/linkedin-dataanalyst.png)
+#  ![linkedin-data-analyst-canada](img/linkedin-dataanalyst.png)
 
 # ## Loading webpage by scrolling down with `JavaScript`
 
@@ -68,7 +68,7 @@ while True:
 # %% [markdown]
 # After 100 job postings there is a "See more jobs" button. Since 100 jobs should be enough for hour purposes we don't proceed with pressing the button.
 
-# ![linkedin-data-analyst-canada](/img/linkedin-dataanalyst-scrolldown.png)
+# ![linkedin-data-analyst-canada](img/linkedin-dataanalyst-scrolldown.png)
 
 # ## Scraping job postings' links
 
