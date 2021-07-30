@@ -23,7 +23,7 @@ import advertools as adv
 import matplotlib.pyplot as plt
 
 # specifying URL and number of job postings
-postings_name = 'Data Analyst'
+postings_name = 'Data Scientist'
 position_num = 10  # numbers 1 to 100
 
 # building linkedin link
