@@ -30,11 +30,15 @@ position_num = 10  # numbers 1 to 100
 posit = '%20'.join(postings_name.split())
 url = f'https://www.linkedin.com/jobs/search?keywords={posit}&location=Canada&geoId=101174742&trk=public_jobs_jobs-search-bar_search-submit&position=1&pageNum=0'
 
-# setting chrome driver path
-path = '/Users/dmytrokryvonog/Documents/DAT/gda/gdasent/chromedriver'
+# CHROME DRIVER INSTALLATION
+# default chromedriver PATH on Mac OS is at /usr/local/bin
+# alternatively specify any path like:
+# path = '/Users/username/file/path//chromedriver'
+# and point to it in the brakets:
+# driver = webdriver.Chrome(path)
 
 # opening url in Chrome browser
-driver = webdriver.Chrome(path)
+driver = webdriver.Chrome()
 driver.get(url)
 
 # %% [markdown]
@@ -81,7 +85,7 @@ for lnk in lnks[:position_num]:
     link_str = (lnk.get_attribute('href'))
     # links_list += [link_str]
     links_list.append(link_str)
-# driver.quit()
+driver.quit()
 
 # previewing list's contents
 for y in range(3):
@@ -149,7 +153,7 @@ plt.tight_layout(pad=0)
 
 # assigning file path
 p_name = '_'.join(postings_name.split())
-f_path = f'pngs/{p_name}-{position_num}.png'
+f_path = f'{p_name}-{position_num}.png'
 # saving png
 plt.savefig(f_path)
 # printing the plot
